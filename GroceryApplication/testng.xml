@@ -1,0 +1,19 @@
+<suite name="mysuite">
+	<test name="mytest">
+	<parameter name="browser" value="chrome"> </parameter>
+		<listeners>
+			<listener class-name="listeners.Listeners"></listener>
+			<listener class-name="listeners.RetryListener"></listener>
+		</listeners>
+
+		<classes>
+			<class name="testscript.LoginTest">
+			<!-- <methods>
+			<include name="addValidAdminUsers"></include>
+			</methods>-->
+
+			</class>
+		</classes>
+	</test>
+
+</suite>

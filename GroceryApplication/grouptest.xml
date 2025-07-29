@@ -1,0 +1,23 @@
+<suite name = "mysuite">
+<test name= "mytest">
+
+<groups>
+<run>
+<exclude name = "smoke">
+
+
+</exclude>
+
+
+
+
+</run>
+</groups>
+<classes>
+<class name = "testscript.ManageNewsTest">
+
+</class>
+</classes>
+</test>
+
+</suite>

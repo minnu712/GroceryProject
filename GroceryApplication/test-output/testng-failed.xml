@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [mysuite]">
+  <test thread-count="5" name="mytest(failed)">
+    <groups>
+      <run>
+        <exclude name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testscript.ManageNewsTest">
+        <methods>
+          <include name="initialiseBrowser"/>
+          <include name="driverQuit"/>
+          <include name="verifyNotExistingNews"/>
+        </methods>
+      </class> <!-- testscript.ManageNewsTest -->
+    </classes>
+  </test> <!-- mytest(failed) -->
+</suite> <!-- Failed suite [mysuite] -->
