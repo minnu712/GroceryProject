@@ -16,12 +16,13 @@ public class ManageContactTest extends BaseClass {
 	LoginPage login;
 	HomePage home;
 	ManageContact contact;
+
 	@Test
 	public void updateContactWithValidData() throws IOException {
 		login = new LoginPage(driver);
-		home=login.loginUsingExcelData();
-		contact=home.clickOnManageContact().editContact("2pm", "70");
-        boolean isalertdispalyed = contact.isAlertsDisplayed();
-		Assert.assertTrue(isalertdispalyed,Constant.upc_updateContactWithValidData);
+		home = login.loginUsingExcelData();
+		contact = home.clickOnManageContact().editContact("2pm", "70");
+		boolean isalertdispalyed = contact.isAlertsDisplayed();
+		Assert.assertTrue(isalertdispalyed, Constant.upc_updateContactWithValidData);
 	}
 }

@@ -18,14 +18,13 @@ public class ManageFooterTest extends BaseClass {
 	LoginPage login;
 	HomePage home;
 	ManageFooter manage;
+
 	@Test
 	public void updateFooterTextWithValidData() throws IOException {
-
 		login = new LoginPage(driver);
-		home=login.loginUsingExcelData();
-		manage=home.clickOnManageFooter().updateFooterText();
+		home = login.loginUsingExcelData();
+		manage = home.clickOnManageFooter().updateFooterText();
 		boolean isalertdispalyed = manage.isAlertsDisplayed();
 		Assert.assertTrue(isalertdispalyed, Constant.upf_updateFooterTextWithValidData);
 	}
-
 }

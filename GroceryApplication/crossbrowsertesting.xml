@@ -1,5 +1,5 @@
-<suite name="crossbrowsertesting" >
-	<test name="chrometest" >
+<suite name="crossbrowsertesting">
+	<test name="chrometest">
 		<parameter name="browser" value="chrome"> </parameter>
 
 		<classes>
@@ -8,7 +8,7 @@
 			</class>
 		</classes>
 	</test>
-<test name="edgetest" >
+	<test name="edgetest">
 		<parameter name="browser" value="edge"> </parameter>
 
 		<classes>
@@ -17,5 +17,5 @@
 			</class>
 		</classes>
 	</test>
-	
+
 </suite>

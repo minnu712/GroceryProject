@@ -20,14 +20,12 @@ public class ManageCategory {
 	public ManageCategory(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-
 	}
 
 	@FindBy(xpath = "//a[@href=\"https://groceryapp.uniqassosiates.com/admin/Category/status?id=2714&st=inactive&page_ad=1\"]")
 	WebElement clickactivebutton;
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	WebElement categoryalertdisplayed;
-
 	@FindBy(xpath = "//i[@class=\'fas fa-edit\']")
 	WebElement clickactionbutton;
 	@FindBy(xpath = "//input[@id='category']")
@@ -36,11 +34,10 @@ public class ManageCategory {
 	WebElement clickdiscountbutton;
 	@FindBy(xpath = "//input[@type='file']")
 	WebElement fileupload;
-	@FindBy(xpath = "//button[@name='update']")
+	@FindBy(xpath = "//button[@name='create']")
 	WebElement clicksavebutton;
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	WebElement categoryaddedalert;
-
 	@FindBy(xpath = "//a[@class='btn btn-sm btn btn-danger btncss']")
 	WebElement clickcategorydeletebutton;
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
@@ -53,7 +50,6 @@ public class ManageCategory {
 
 	public boolean isAlertDisplay() {
 		return categoryalertdisplayed.isDisplayed();
-
 	}
 
 	public ManageCategory updateCategory(String category) {
@@ -62,14 +58,12 @@ public class ManageCategory {
 		entercategory.sendKeys(category + general.generateCurrentDateAndTime());
 		clickdiscountbutton.click();
 		return this;
-
 	}
 
 	public ManageCategory fileUploadSendkeys() {
-
 		String filepath = Constant.imagepath;
 		file.fileUploadSendkeys(fileupload, filepath);
-		clicksavebutton.click();
+		general.clickJavaScriptExecutor(clicksavebutton, driver);
 		return this;
 	}
 

@@ -1,14 +1,12 @@
 <suite name="parallel testing" parallel="tests" thread-count="2">
 	<test name="mytest1" thread-count="5">
 		<parameter name="browser" value="chrome"> </parameter>
-
 		<classes>
 			<class name="testscript.ManageNewsTest">
-
 			</class>
 		</classes>
 	</test>
-<test name="mytest2" thread-count="5">
+	<test name="mytest2" thread-count="5">
 		<parameter name="browser" value="chrome"> </parameter>
 
 		<classes>
@@ -17,5 +15,5 @@
 			</class>
 		</classes>
 	</test>
-	
+
 </suite>

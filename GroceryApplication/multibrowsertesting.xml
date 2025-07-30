@@ -4,11 +4,10 @@
 
 		<classes>
 			<class name="testscript.ManageNewsTest">
-
 			</class>
 		</classes>
 	</test>
-<test name="edgetest" thread-count="5">
+	<test name="edgetest" thread-count="5">
 		<parameter name="browser" value="edge"> </parameter>
 
 		<classes>
@@ -17,5 +16,5 @@
 			</class>
 		</classes>
 	</test>
-	
+
 </suite>

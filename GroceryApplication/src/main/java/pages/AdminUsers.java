@@ -15,11 +15,11 @@ import utilities.WaitUtilities;
 public class AdminUsers {
 	public WebDriver driver;
 	GeneralUtitilty general = new GeneralUtitilty();
-    WaitUtilities wait = new WaitUtilities();
+	WaitUtilities wait = new WaitUtilities();
+
 	public AdminUsers(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-
 	}
 
 	@FindBy(xpath = "//a[@class='btn btn-rounded btn-danger']")
@@ -37,18 +37,18 @@ public class AdminUsers {
 
 	public AdminUsers addAdmin(String username, String password) {
 		clicknewbutton.click();
-		
 		enterusername.sendKeys(username + general.generateCurrentDateAndTime());
 		enterpassword.sendKeys(password);
-        return this;
+		return this;
 	}
-	public AdminUsers selectUserType() {
 
+	public AdminUsers selectUserType() {
 		general.selectDropdownWithIndex(selectusertype, 1);
 		general.clickJavaScriptExecutor(clicksavebutton, driver);
-		wait.waitForWebElementclick(driver,clicksavebutton);
-        return this;
+		wait.waitForWebElementclick(driver, clicksavebutton);
+		return this;
 	}
+
 	public boolean isAlertsDisplayed() {
 		return alertofnewadminadded.isDisplayed();
 

@@ -26,22 +26,16 @@ public class ManageContact {
 
 	@FindBy(xpath = "//i[@class='fas fa-edit']")
 	WebElement clickactionbutton;
-
 	@FindBy(xpath = "//input[@id='phone']")
 	WebElement enterphonenumber;
-
 	@FindBy(xpath = "//input[@id='email']")
 	WebElement enteremail;
-
 	@FindBy(xpath = "//textarea[@name='address']")
 	WebElement enteraddress;
-
 	@FindBy(xpath = "//textarea[@name='del_time']")
 	WebElement enterdeliverytime;
-
 	@FindBy(xpath = "//input[@id=\'del_limit\']")
 	WebElement enterdeliverychargelimit;
-
 	@FindBy(xpath = "//button[@type='submit']")
 	WebElement clickupdatebutton;
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")

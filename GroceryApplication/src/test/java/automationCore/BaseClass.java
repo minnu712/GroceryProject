@@ -19,48 +19,39 @@ import utilities.ScreenshotUtility;
 import utilities.WaitUtilities;
 
 public class BaseClass {
-	Properties prop ;
+	Properties prop;
 	FileInputStream fs;
-	
-    WaitUtilities wait = new WaitUtilities();
+	WaitUtilities wait = new WaitUtilities();
 	public WebDriver driver;
 
-	@BeforeMethod(alwaysRun=true)
+	@BeforeMethod(alwaysRun = true)
 	@Parameters("browser")
 	public void initialiseBrowser(String browser) throws Exception {
 		prop = new Properties();
-		fs=new FileInputStream(Constant.CONFIGFILE);
+		fs = new FileInputStream(Constant.CONFIGFILE);
 		prop.load(fs);
-		if(browser.equalsIgnoreCase("chrome")) {
+		if (browser.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
-		}
-		else if(browser.equalsIgnoreCase("edge")) {
+		} else if (browser.equalsIgnoreCase("edge")) {
 			driver = new EdgeDriver();
-			
-			
-		}
-		else if(browser.equalsIgnoreCase("firefox")) {
+
+		} else if (browser.equalsIgnoreCase("firefox")) {
 			driver = new FirefoxDriver();
-		}
-		else {
+		} else {
 			throw new Exception("invalid browser");
 		}
-		
-		
 		driver.get(prop.getProperty("url"));
 		wait.implicitWait(driver);
-		
 	}
 
-	@AfterMethod(alwaysRun=true)
-
+	@AfterMethod(alwaysRun = true)
 	public void driverQuit(ITestResult itestresult) throws IOException {
 		if (itestresult.getStatus() == ITestResult.FAILURE) {
 			ScreenshotUtility screenshot = new ScreenshotUtility();
 			screenshot.getScreenshot(driver, itestresult.getName());
-		}
-		// driver.quit();
 
+			// driver.quit();
+		}
 	}
-	
+
 }

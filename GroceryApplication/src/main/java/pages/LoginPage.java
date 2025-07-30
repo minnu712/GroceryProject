@@ -15,7 +15,6 @@ public class LoginPage {
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-
 	}
 
 	@FindBy(xpath = "//input[@name='username']")
@@ -29,20 +28,20 @@ public class LoginPage {
 	@FindBy(xpath = "//span[@class='brand-text font-weight-light']")
 	WebElement Homepagetext;
 
-	public LoginPage enterUsernameOnUsernamefield(String username) {
+	public void enterUsernameOnUsernamefield(String username) {
 		usernamefield.sendKeys(username);
-		return this;
+		
 	}
 
-	public LoginPage enterPassword(String password) { 
+	public void enterPassword(String password) {
 		passwordfield.sendKeys(password);
-		return this;
+
 	}
 
 	public HomePage clickOnloginbutton() {
 		loginbutton.click();
 		return new HomePage(driver);
-
+		
 	}
 
 	public boolean isHomepageLoaded() {
@@ -59,8 +58,9 @@ public class LoginPage {
 		String password = ExcelUtility.readStringData(1, 1, "LoginPage");
 		usernamefield.sendKeys(username);
 		passwordfield.sendKeys(password);
+		loginbutton.click();
 		return new HomePage(driver);
-		
-	}
 
+	}
 }
+

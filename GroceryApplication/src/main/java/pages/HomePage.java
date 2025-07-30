@@ -11,12 +11,11 @@ public class HomePage {
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-
 	}
 
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news' and @class='small-box-footer']")
 	private WebElement managenewslink;
-	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-category'and@class='active nav-link']")
+	@FindBy(xpath = "//a[@href=\"https://groceryapp.uniqassosiates.com/admin/list-category\"and@class=\"small-box-footer\"]")
 	private WebElement managecategorylink;
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-contact'and@class='small-box-footer']")
 	private WebElement managecontactlink;
@@ -28,7 +27,6 @@ public class HomePage {
 	WebElement clickadminbutton;
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/logout'and@class='dropdown-item']")
 	WebElement clicklogoutbutton;
-
 	@FindBy(xpath = "//p[@class='login-box-msg']")
 	WebElement loginpagetext;
 
@@ -57,10 +55,9 @@ public class HomePage {
 		return new ManageFooter(driver);
 	}
 
-	public void logoutPage() {
+	public void logoutPage() { //
 		clickadminbutton.click();
 		clicklogoutbutton.click();
-
 	}
 
 	public boolean isLoginPageLoaded() {
