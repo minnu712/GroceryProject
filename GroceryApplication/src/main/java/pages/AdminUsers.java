@@ -45,7 +45,6 @@ public class AdminUsers {
 	public AdminUsers selectUserType() {
 		general.selectDropdownWithIndex(selectusertype, 1);
 		general.clickJavaScriptExecutor(clicksavebutton, driver);
-		wait.waitForWebElementclick(driver, clicksavebutton);
 		return this;
 	}
 

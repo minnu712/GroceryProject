@@ -8,13 +8,13 @@
   <test thread-count="5" name="mytest(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testscript.LoginTest">
+      <class name="testscript.AdminUsersTest">
         <methods>
           <include name="initialiseBrowser"/>
           <include name="driverQuit"/>
-          <include name="verifyLoginwithvalidcredentials"/>
+          <include name="addValidAdminUsers"/>
         </methods>
-      </class> <!-- testscript.LoginTest -->
+      </class> <!-- testscript.AdminUsersTest -->
     </classes>
   </test> <!-- mytest(failed) -->
 </suite> <!-- Failed suite [mysuite] -->

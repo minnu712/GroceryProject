@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-mysuite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-mysuite" title="testscript.LoginTest" class="method navigator-link" hash-for-method="verifyLoginwithvalidcredentials">verifyLoginwithvalidcredentials</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-mysuite" title="testscript.LogOutTest" class="method navigator-link" hash-for-method="logoutApplication">logoutApplication</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-mysuite -->
@@ -121,14 +121,14 @@
           <div class="suite-mysuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testscript.LoginTest</span>
+              <span class="class-name">testscript.LogOutTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyLoginwithvalidcredentials">
-                  </a> <!-- verifyLoginwithvalidcredentials -->
-                  <span class="method-name">verifyLoginwithvalidcredentials</span>
+                  <a name="logoutApplication">
+                  </a> <!-- logoutApplication -->
+                  <span class="method-name">logoutApplication</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -150,11 +150,7 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;mytest&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testscript.LoginTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;verifyLoginwithvalidcredentials&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- testscript.LoginTest --&gt;
+      &lt;class name=&quot;testscript.LogOutTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- mytest --&gt;
 &lt;/suite&gt; &lt;!-- mysuite --&gt;
@@ -196,14 +192,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyLoginwithvalidcredentials')
-data.setCell(0, 2, 'testscript.LoginTest')
-data.setCell(0, 3, 1614);
+data.setCell(0, 1, 'logoutApplication')
+data.setCell(0, 2, 'testscript.LogOutTest')
+data.setCell(0, 3, 2578);
 window.suiteTableData['mysuite']= { tableData: data, tableDiv: 'times-div-mysuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-mysuite">
               </div> <!-- times-div-mysuite -->
             </div> <!-- times-div -->
@@ -218,20 +214,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-mysuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">3 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">testscript.LoginTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">verifyLoginWithInValidUsernameAndvalidPassword</span>
-                <br/>
-                <span class="ignored-method-name">verifyLoginWithValidUsernameAndInvalidPassword</span>
-                <br/>
-                <span class="ignored-method-name">verifyLoginWithInValidcredentials</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-mysuite" class="panel">
@@ -240,18 +225,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testscript.LoginTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testscript.LogOutTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initialiseBrowser(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyLoginwithvalidcredentials</span>
-                <span class="method-start">2124 ms</span>
+                <span class="method-name">logoutApplication</span>
+                <span class="method-start">3311 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">driverQuit([TestResult name=verifyLoginwithvalidcredentials status=SUCCESS method=LoginTest.verifyLoginwithvali...)</span>
-                <span class="method-start">3750 ms</span>
+                <span class="method-name">driverQuit([TestResult name=logoutApplication status=SUCCESS method=LogOutTest.logoutApplication()[pri:0, insta...)</span>
+                <span class="method-start">5898 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

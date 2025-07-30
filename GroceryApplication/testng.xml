@@ -6,7 +6,7 @@
 			<listener class-name="listeners.RetryListener"></listener>
 		</listeners>
 		<classes>
-			<class name="testscript.ManageCategoryTest">
+			<class name="testscript.LogOutTest">
 				<!--  <methods>
 			<include name="verifyLoginwithvalidcredentials"></include>
 			</methods>-->

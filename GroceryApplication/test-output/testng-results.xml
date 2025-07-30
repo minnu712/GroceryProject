@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-30T09:52:58 IST" name="mysuite" finished-at="2025-07-30T09:53:02 IST" duration-ms="3799">
+  <suite started-at="2025-07-30T10:51:27 IST" name="mysuite" finished-at="2025-07-30T10:51:33 IST" duration-ms="5942">
     <groups>
     </groups>
-    <test started-at="2025-07-30T09:52:58 IST" name="mytest" finished-at="2025-07-30T09:53:02 IST" duration-ms="3799">
-      <class name="testscript.LoginTest">
-        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscript.LoginTest@37313c65]" started-at="2025-07-30T09:52:58 IST" name="initialiseBrowser" finished-at="2025-07-30T09:53:01 IST" duration-ms="2120" status="PASS">
+    <test started-at="2025-07-30T10:51:27 IST" name="mytest" finished-at="2025-07-30T10:51:33 IST" duration-ms="5942">
+      <class name="testscript.LogOutTest">
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscript.LogOutTest@6933b6c6]" started-at="2025-07-30T10:51:27 IST" name="initialiseBrowser" finished-at="2025-07-30T10:51:31 IST" duration-ms="3310" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,22 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialiseBrowser -->
-        <test-method signature="verifyLoginwithvalidcredentials()[pri:0, instance:testscript.LoginTest@37313c65]" started-at="2025-07-30T09:53:01 IST" name="verifyLoginwithvalidcredentials" finished-at="2025-07-30T09:53:02 IST" duration-ms="1614" status="PASS">
+        <test-method signature="logoutApplication()[pri:0, instance:testscript.LogOutTest@6933b6c6]" started-at="2025-07-30T10:51:31 IST" name="logoutApplication" finished-at="2025-07-30T10:51:33 IST" duration-ms="2578" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLoginwithvalidcredentials -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@37313c65]" started-at="2025-07-30T09:53:02 IST" name="driverQuit" finished-at="2025-07-30T09:53:02 IST" duration-ms="4" status="PASS">
+        </test-method> <!-- logoutApplication -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.LogOutTest@6933b6c6]" started-at="2025-07-30T10:51:33 IST" name="driverQuit" finished-at="2025-07-30T10:51:33 IST" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyLoginwithvalidcredentials status=SUCCESS method=LoginTest.verifyLoginwithvalidcredentials()[pri:0, instance:testscript.LoginTest@37313c65] output={null}]]]>
+                <![CDATA[[TestResult name=logoutApplication status=SUCCESS method=LogOutTest.logoutApplication()[pri:0, instance:testscript.LogOutTest@6933b6c6] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-      </class> <!-- testscript.LoginTest -->
+      </class> <!-- testscript.LogOutTest -->
     </test> <!-- mytest -->
   </suite> <!-- mysuite -->
 </testng-results>
